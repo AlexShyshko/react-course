@@ -1,0 +1,9 @@
+#root {
+  display: grid;
+  grid-template-columns: [column-start] 100% [column-end];
+  grid-template-rows: [header-start] 5vh [header-end main-start] 85vh [main-end footer-start] 10vh [footer-end];
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  text-align: center;
+}

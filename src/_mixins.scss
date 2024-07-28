@@ -1,0 +1,23 @@
+@use './variables';
+
+@mixin headers-all-settings {
+    font-family: variables.$font-family-main;
+    margin: 0;
+    color: variables.$font-color-main;
+}
+
+@mixin h1-header {
+    @include headers-all-settings;
+    font-size: xx-large;
+}
+
+@mixin h2-header {
+    @include headers-all-settings;
+    font-size: x-large;
+}
+
+@mixin h2-header-solar-system {
+    @include headers-all-settings;
+    @include h2-header;
+    color: variables.$font-color-secondary;
+}

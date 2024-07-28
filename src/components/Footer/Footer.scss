@@ -1,0 +1,6 @@
+@use '../../mixins';
+@use '../../variables';
+
+.Footer {
+  background-color: variables.$background-color-main;
+}

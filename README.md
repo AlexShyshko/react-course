@@ -101,3 +101,17 @@ export default {
 - npm init @eslint/config@latest - create config
 - npm install -D prettier eslint-config-prettier eslint-plugin-prettier - add prettier
 - npm install eslint-plugin-react-compiler --save-dev - intall compiler with rules
+
+## Generate React CLI:
+- npm i generate-react-cli - install package
+- npx generate-react-cli component < Name > - create component
+- Add folder with templates to ignorePatterns
+```
+ignorePatterns: ["dist", ".eslintrc.cjs", "templates"],
+```
+
+## SASS:
+- npm i sass sass-loader
+
+## Material UI:
+- npm install @mui/material @emotion/react @emotion/styled

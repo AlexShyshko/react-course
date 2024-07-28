@@ -1,0 +1,12 @@
+@use '../../mixins';
+@use '../../variables';
+
+.TemplateName {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  background: cornflowerblue;
+  .TemplateNameHeader {
+    @include mixins.h2-header;
+  }
+}

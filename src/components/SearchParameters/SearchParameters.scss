@@ -1,0 +1,12 @@
+@use '../../mixins';
+@use '../../variables';
+
+.SearchParameters {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  background: orchid;
+  .SearchParametersHeader {
+    @include mixins.h2-header;
+  }
+}

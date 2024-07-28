@@ -1,0 +1,26 @@
+@use '../../mixins';
+@use '../../variables';
+
+.Header {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: '. header-title space-relax-mode-switch-group';
+  background-color: variables.$background-color-main;
+}
+
+.header-title {
+  grid-area: header-title;
+}
+
+.space-relax-mode-switch-group {
+  z-index: 99999;
+  grid-area: space-relax-mode-switch-group;
+  justify-self: end;
+}
+
+.space-relax-mode-switch-control {
+  span:last-child {
+    @include mixins.h2-header-solar-system;
+  }
+}

@@ -1,0 +1,11 @@
+@use '../../mixins';
+@use '../../variables';
+
+.Diagram {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  .DiagramHeader {
+    @include mixins.h2-header;
+  }
+}

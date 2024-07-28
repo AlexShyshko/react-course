@@ -1,0 +1,11 @@
+@use '../../mixins';
+@use '../../variables';
+
+.SummaryResult {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  .SummaryResultHeader {
+    @include mixins.h2-header;
+  }
+}
