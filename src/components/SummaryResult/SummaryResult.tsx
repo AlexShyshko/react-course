@@ -1,13 +1,26 @@
-import "./SummaryResult.scss";
+import './SummaryResult.scss';
+
+import globalContext from '../../global-context.tsx';
+import { useContext, useEffect } from 'react';
+
+import SummaryTable from '../SummaryTable/SummaryTable.tsx';
 
 function SummaryResult() {
-  return (
-    <>
-		<div className="SummaryResult">
-			<h2 className="SummaryResultHeader">SummaryResult component</h2>
-		</div>
-    </>
-  );
+	const { apiResponse } = useContext(globalContext);
+
+	useEffect(() => {
+		console.log('apiResponse');
+		console.log(apiResponse);
+	}, [apiResponse]);
+
+	return (
+		<>
+			<div className="SummaryResult">
+				<h2 className="SummaryResultHeader">Summary Result</h2>
+				<SummaryTable />
+			</div>
+		</>
+	);
 }
 
 export default SummaryResult;

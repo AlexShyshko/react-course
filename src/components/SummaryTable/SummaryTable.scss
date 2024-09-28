@@ -1,11 +1,12 @@
 @use '../../mixins';
 @use '../../variables';
 
-.SummaryResult {
+.SummaryTable {
   //display: grid;
   height: 100%;
   width: 100%;
-  .SummaryResultHeader {
+  //background: cornflowerblue;
+  .SummaryTableHeader {
     @include mixins.h2-header;
   }
 }

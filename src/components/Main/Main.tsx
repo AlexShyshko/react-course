@@ -1,16 +1,20 @@
 import './Main.scss';
 
-import { MainProps } from '../../interfaces-and-types';
+//import { MainProps } from '../../interfaces-and-types';
 
-import SolarSystem from '../SolarSystem/SolarSystem';
-import MainContentContainer from '../MainContentContainer/MainContentContainer';
+import SearchParameter from '../SearchParameters/SearchParameters';
+import SummaryResult from '../SummaryResult/SummaryResult';
+import Diagram from '../Diagram/Diagram';
+import DetailedReport from '../DetailedReport/DetailedReport';
 
-function Main({ checked }: MainProps) {
+function Main(/*{ checked }: MainProps*/) {
 	return (
 		<>
-			<div className={checked ? 'solar-system-fullscreen' : 'Main'}>
-				{checked ? <SolarSystem/> : null}
-				{checked ? null : <MainContentContainer/>}
+			<div className="Main">
+				<SearchParameter />
+				<SummaryResult />
+				<Diagram />
+				<DetailedReport />
 			</div>
 		</>
 	);

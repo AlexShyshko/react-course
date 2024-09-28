@@ -2,5 +2,6 @@
 @use '../../variables';
 
 .Footer {
-  background-color: variables.$background-color-main;
+  display: grid;
+  //background-color: variables.$background-color-main;
 }

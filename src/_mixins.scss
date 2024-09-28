@@ -3,7 +3,7 @@
 @mixin headers-all-settings {
     font-family: variables.$font-family-main;
     margin: 0;
-    color: variables.$font-color-main;
+    color: variables.$font-color-primary;
 }
 
 @mixin h1-header {
@@ -20,4 +20,12 @@
     @include headers-all-settings;
     @include h2-header;
     color: variables.$font-color-secondary;
+}
+
+@mixin input-date-color-primary-calendar-icon {
+    filter: invert(75%) sepia(13%) saturate(5856%) hue-rotate(188deg) brightness(106%) contrast(101%);
+}
+
+@mixin input-date-color-secondary-calendar-icon {
+    filter: invert(49%) sepia(61%) saturate(1073%) hue-rotate(360deg) brightness(99%) contrast(102%);
 }

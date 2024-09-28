@@ -1,7 +1,7 @@
 .SolarSystem {
-  height: 100%;
-	width: 100%;
-  font: normal 1em/1.45em "Helvetica Neue", Helvetica, Arial, sans-serif;
+	height: 100vh;
+	width: 100vw;
+	font: normal 1em/1.45em "Helvetica Neue", Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	color: #fff;
 	background: radial-gradient(ellipse at bottom, #1C2837 0%, #050608 100%);
@@ -276,4 +276,8 @@
 	to {
 		transform: rotate(-360deg);
 	}
+}
+
+.space-relax-mode-switch-group {
+	position: absolute;
 }

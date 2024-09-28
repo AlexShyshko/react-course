@@ -44,9 +44,14 @@ export default {
 
 ## Work wit GIT:
 - git checkout -b ＜new-branch＞ - create new branch and move to it
+- git log - see all commits
 
 ## Useful commands:
 - pwd - check path
+
+## Useful hotkeys:
+- CTRL + INSERT - copy
+- SHIFT + INSERT - paste
 
 # VS Code
 
@@ -58,7 +63,7 @@ export default {
 - Live Server
 - Prettier - Code formatter
 
-## Useful commands:
+## Useful hotkeys:
 - CTRL + / - comment/uncomment line
 - SHIFT + ALT + A - comment/uncomment block /* */
 - CTRL + K + C - comment block //
@@ -115,3 +120,18 @@ ignorePatterns: ["dist", ".eslintrc.cjs", "templates"],
 
 ## Material UI:
 - npm install @mui/material @emotion/react @emotion/styled
+
+## Route:
+- npm install react-router-dom
+
+## React Query Builder:
+- npm i react-querybuilder @react-querybuilder/material @mui/icons-material @mui/material
+
+## date-fns:
+- npm install date-fns --save
+
+## React Date Picker:
+- npm install react-datepicker --save
+
+## TanStack Table:
+- npm install @tanstack/vue-table

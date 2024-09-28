@@ -1,0 +1,24 @@
+@use '../../mixins';
+@use '../../variables';
+
+.SearchParametersContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  height: 100%;
+  width: 100%;
+  .SearchParametersContainerHeader {
+    @include mixins.h2-header;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    @include mixins.input-date-color-secondary-calendar-icon;
+  }
+  .ruleGroup-body {
+    max-height: 30vh;
+    overflow-y: auto;
+  }
+  button {
+    width: fit-content;
+    align-self: center;
+  }
+}

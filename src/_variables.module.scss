@@ -1,0 +1,15 @@
+@use './variables';
+
+:export {
+    fontFamilyMain: variables.$font-family-main;
+
+    backgroundColorMain: variables.$background-color-main;
+
+    colorPrimary: variables.$color-primary;
+    colorSecondary: variables.$color-secondary;
+
+    fontColorPrimary: variables.$font-color-primary;
+    fontColorSecondary: variables.$font-color-secondary;
+
+    justTestColor: variables.$just-test-color;
+}

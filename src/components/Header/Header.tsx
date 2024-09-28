@@ -1,15 +1,34 @@
 import './Header.scss';
 
-import { HeaderProps } from '../../interfaces-and-types';
+import globalContext from '../../global-context.tsx';
+import { useState, useContext } from 'react';
+
+import { HEADER_TITLE, SPACE_RELAX_MODE_LABEL } from '../../constants';
+import { InputHandler } from '../../interfaces-and-types';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Switch from '@mui/material/Switch';
 
-const HEADER_TITLE = 'The Solar System catalog';
-const SPACE_RELAX_MODE_LABEL = 'Space relax mode';
+function Header(/*{ stateRelaxModeChecked, setStateRelaxModeChecked }: HeaderProps*/) {
+	const location = useLocation();
+	const navigate = useNavigate();
 
-function Header({ checked, handleChange }: HeaderProps) {
+	const { handleContextRelaxModeChecked } = useContext(globalContext);
+	const [relaxModeChecked, setRelaxModeChecked] = useState(false);
+
+	const handleSetRelaxModeChecked: InputHandler = (event) => {
+		setRelaxModeChecked(event.target.checked);
+
+		if (event.target.checked) {
+			navigate('/solar-system', {
+				state: { previousRoutePathname: location.pathname },
+			});
+		}
+
+		handleContextRelaxModeChecked(event);
+	};
 
 	return (
 		<>
@@ -20,8 +39,8 @@ function Header({ checked, handleChange }: HeaderProps) {
 						control={
 							<Switch
 								color="warning"
-								checked={checked}
-								onChange={handleChange}
+								checked={relaxModeChecked}
+								onChange={handleSetRelaxModeChecked}
 								inputProps={{ 'aria-label': 'controlled' }}
 							/>
 						}

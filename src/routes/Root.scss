@@ -1,3 +1,6 @@
+@use '../mixins';
+@use '../variables';
+
 #root {
   display: grid;
   grid-template-columns: [column-start] 100% [column-end];
@@ -6,4 +9,5 @@
   min-height: 100vh;
   margin: 0;
   text-align: center;
+  background-color: variables.$background-color-main;
 }

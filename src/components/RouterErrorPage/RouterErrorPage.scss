@@ -1,0 +1,12 @@
+@use '../../mixins';
+@use '../../variables';
+
+#RouterErrorPage {
+    @include mixins.headers-all-settings;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: variables.$background-color-main;
+}
